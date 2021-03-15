@@ -4,6 +4,7 @@ USE `proyecto_101`;
 
 CREATE TABLE `trabajadores`(
 	`id_trabajador` INT UNSIGNED AUTO_INCREMENT
+	,`nombre_real` VARCHAR(255)
 	,`nombre` VARCHAR(255)
 	,`apellidos` VARCHAR(255)
 	,`disponibilidad` INT DEFAULT 100
@@ -23,16 +24,16 @@ CREATE TABLE `registro`(
     ,FOREIGN KEY (id_trabajador) REFERENCES trabajadores(id_trabajador)
 );
 
-insert into trabajadores (nombre,apellidos,disponibilidad,grupo) values ('Alan', 'Brito',38, 1)
-,('Alba', 'Bosa',62, 2)
-,('Alex', 'Plosivo',108, 1)
-,('Amilcar', 'Cajada',56, 3)
-,('Ana', 'Konda',142, 1)
-,('Carlitos', 'Tado',132, 2)
-,('Cindy', 'Nero',102, 3)
-,('Coco', 'Drilo',91, 3)
-,('Diego', 'Loso',91, 2)
-,('Eddy', 'Ficio',129, 1);
+insert into trabajadores (nombre_real,nombre,apellidos,disponibilidad,grupo) values ('Pablo','Alan', 'Brito',38, 1)
+,('Jesús','Alba', 'Bosa',62, 2)
+,('Rafa','Alex', 'Plosivo',108, 1)
+,('Andrés','Amilcar', 'Cajada',56, 3)
+,('Manuel','Ana', 'Konda',142, 1)
+,('Alberto.O','Carlitos', 'Tado',132, 2)
+,('Alberto.B','Cindy', 'Nero',102, 3)
+,('Moisés','Coco', 'Drilo',91, 3)
+,('Samuel','Diego', 'Loso',91, 2)
+,('Ismael','Eddy', 'Ficio',129, 1);
 		  
 insert into registro (id_trabajador, fecha, disponibilidad_inicial, disponibilidad_modificar, disponibilidad_total) values (1, '2021-03-01', 100, 6, '106');
 insert into registro (id_trabajador, fecha, disponibilidad_inicial, disponibilidad_modificar, disponibilidad_total) values (2, '2021-03-01', 100, -10, '90');
