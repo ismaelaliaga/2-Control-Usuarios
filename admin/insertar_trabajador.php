@@ -18,6 +18,8 @@
                     <input class="form_input" type="text" id="nombre" name="nombre">
                     <label class="form_label"for="title">Apellidos:</label>
                     <input class="form_input" type="text" id="apellidos" name="apellidos">
+                    <label class="form_label"for="title">Nombre Real:</label>
+                    <input class="form_input" type="text" id="nombre_real" name="nombre_real">
                 </div>
                 <button class="form_button" type="submit" name="enviar">Añadir Usuario</button>
                 
@@ -28,10 +30,11 @@
         include("../conexionbd.php");
         if (isset($_POST["enviar"])) {
             
-            $trabajadores = $bd->prepare("INSERT INTO `trabajadores` (`nombre`, `apellidos`) VALUES (?,?)");
-            $trabajadores->bind_param('ss', $nombre , $apellidos);
+            $trabajadores = $bd->prepare("INSERT INTO `trabajadores` (`nombre`, `apellidos`, `nombre_real`) VALUES (?,?,?)");
+            $trabajadores->bind_param('sss', $nombre , $apellidos, $nombrereal);
             $nombre=$_POST["nombre"];
             $apellidos=$_POST["apellidos"];
+            $nombrereal=$_POST["nombre_real"];
             $trabajadores->execute();
             header("location:administrar_trabajadores.php"); 
         }
