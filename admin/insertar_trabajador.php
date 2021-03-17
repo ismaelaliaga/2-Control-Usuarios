@@ -10,7 +10,11 @@
 </head>
 
 <body>
-
+    
+    <?php
+    /*
+    * Se añade a la base de datos y a nuestra aplicación un nuevo trabajador
+    */?>
 
     <div class="contenedor_form">
         <div class="titulo_form">Añadir Usuario</div>
