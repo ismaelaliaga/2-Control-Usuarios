@@ -11,6 +11,9 @@
 
 <body>
     <?php
+    /*
+    * Se edita un usuario que ya se encuentra en la base de datos mediante un formulario
+    */
     include("../conexionbd.php");
     if (!isset($_POST["enviar"])) {
 
