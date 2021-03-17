@@ -38,6 +38,7 @@
             $apellidos = $_POST["apellidos"];
             $nombrereal = $_POST["nombre_real"];
             $trabajadores->execute();
+            $trabajadores->close();
             header("location:administrar_trabajadores.php");
         }
 
