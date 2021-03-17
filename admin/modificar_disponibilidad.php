@@ -180,8 +180,9 @@
         </div>
     <?php
         }
+        $saberdia->close();
     }
-    $saberdia->close();
+    
     if (isset($_POST["enviar"])) {
         $dia=$_POST["dia"];
 

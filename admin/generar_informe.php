@@ -54,8 +54,9 @@
                         ";
         }
         echo "<a href=administrar_trabajadores.php>Volver Atrás</a>";
+        $informe->close();
     }
-    $informe->close();
+    
         ?>
 </body>
 
