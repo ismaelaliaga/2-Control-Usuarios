@@ -47,6 +47,7 @@
         $id = $_POST["id"];
         $estado = $_POST["estado"];
         $estado_trabajador->execute();
+        $estado_trabajador->close();
         header("location:administrar_trabajadores.php");
     }
     ?>
