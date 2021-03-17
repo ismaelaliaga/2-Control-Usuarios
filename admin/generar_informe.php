@@ -11,6 +11,12 @@
 
 <body>
     <?php
+    /*
+    * Se selecciona una fecha del calendario y muestra el total de puntos de disponibilidad
+    * totales que tenia el trabajador el día especificado de más antiguo a más nuevo
+    * si hay trabajadores que tienen en el mismo dia varias modificaciones la más actual es la
+    * última que aparezca en el informe.
+    */
     include("../conexionbd.php");
     if (!isset($_POST["enviar"])) {
     ?>
@@ -48,7 +54,9 @@
                         ";
         }
         echo "<a href=administrar_trabajadores.php>Volver Atrás</a>";
+        $informe->close();
     }
+    
         ?>
 </body>
 

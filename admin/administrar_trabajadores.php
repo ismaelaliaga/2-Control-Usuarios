@@ -10,7 +10,12 @@
 </head>
 
 <body>
-
+    <?php
+    /*
+    * Se muestran los datos de los trabajadores y se añaden las opciones
+    * para que el administrador pueda gestionar a los empleados, generar informes
+    * y modificar la puntuación de los trabajadores
+    */?>
     <header>
         <input type="checkbox" id="btn_menu">
         <label for="btn_menu"><img src="../img/icono_menu.png" width="100%" height="100%"></label>
@@ -83,6 +88,7 @@
             </div>
             ";
         }
+        $trabajadores->close();
         ?>
     </div>
 
