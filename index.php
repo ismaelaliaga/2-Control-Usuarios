@@ -47,6 +47,7 @@
             <div class=grid_items>" . $salario_trabajador . "</div>
             ";
         }
+        $trabajadores->close();
         ?>
     </div>
 </body>
