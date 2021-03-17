@@ -45,6 +45,7 @@
         </form>
 
     <?php
+        $trabajadores->close();
     }
     if (isset($_POST["enviar"])) {
 
@@ -55,6 +56,7 @@
         $grupo = intval($_POST["grupo"]);
         $id = intval($_POST["id"]);
         $trabajadores->execute();
+        $trabajadores->close();
         header("location:administrar_trabajadores.php");
     }
     ?>
