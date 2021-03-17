@@ -11,6 +11,19 @@
 
 <body>
     <?php
+    /*
+    * Se comprueba el día en el que el administrador va a modificar los puntos
+    * de disponibilidad, se comprueba que si es martes pueda solo añadir los puntos
+    * de las 5 horas de jornada laboral existentes , si es viernes solo podrá añadir
+    * los puntos a las 4 horas de la jornada laboral y si es lunes, miércoles o jueves
+    * se le mostrarán las 6 horas de jornada laboral existentes, de esta manera conseguimos
+    * restringir automáticamente con nuestra aplicación las horas de las jornadas laborales
+    * para que siempre sean correctas y no se produzca ningún error de introducir más horas
+    * de las reales.
+    * Además al modificar la puntuación si el trabajador tiene menos de 50 puntos se le quita
+    * automáticamente del grupo de trabajo en el que estuviera trabajando y de la misma forma
+    * el bonus de salario se le quita pasando a tener un 0% de bonus salarial.
+    */
     include("../conexionbd.php");
     if (!isset($_POST["enviar"])) {
         $id = $_GET["id"];
