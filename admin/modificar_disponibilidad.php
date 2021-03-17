@@ -168,6 +168,7 @@
     <?php
         }
     }
+    $saberdia->close();
     if (isset($_POST["enviar"])) {
         $dia=$_POST["dia"];
 
@@ -252,6 +253,9 @@
             $salario = '00.00';
             $visualizar_disponibilidad->execute();
         }
+        $trabajadores->close();
+        $disponibilidad->close();
+        $visualizar_disponibilidad->close();
         header("location:administrar_trabajadores.php");
     }
 
