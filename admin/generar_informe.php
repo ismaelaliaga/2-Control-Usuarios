@@ -16,7 +16,7 @@
     ?>
 
         <form method="post" class="contenedor_tabla">
-            <div class="contenedor_titulo">Editar Trabajador</div>
+            <div class="contenedor_titulo">Informe trabajadores</div>
             <div class="grid_header">Filtrar por fecha: </div><input type="date" name="fecha" id="fecha">
             <button class="grid_items_edit" type="submit" name="enviar">Generar Informe</button>
 
