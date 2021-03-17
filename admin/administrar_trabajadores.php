@@ -47,7 +47,7 @@
             <div class=grid_items_admin>" . $nombre_trabajador . "</div>
             <div class=grid_items_admin>" . $apellidos_trabajador . "</div>
             <div class=grid_items_admin>" . $disponibilidad_trabajador . "</div>
-            <div class=grid_items_admin>" . $grupo_trabajador . "</div>
+            <div class=grid_items_admin>"; ($grupo_trabajador==0)? printf("Sin grupo"):printf($grupo_trabajador); echo "</div>
             <div class=grid_items_admin>" . $salario_trabajador . "%</div>
             <div class=grid_items_admin>
                 <a href=editar_trabajador.php?id=$id_trabajador><img src=../img/editar_usuario.png></a>
@@ -76,7 +76,7 @@
             <div class=grid_items_admin>" . $nombre_trabajador . "</div>
             <div class=grid_items_admin>" . $apellidos_trabajador . "</div>
             <div class=grid_items_admin>" . $disponibilidad_trabajador . "</div>
-            <div class=grid_items_admin>" . $grupo_trabajador . "</div>
+            <div class=grid_items_admin>"; ($grupo_trabajador==0)? printf("Sin grupo"):printf($grupo_trabajador); echo "</div>
             <div class=grid_items_admin>" . $salario_trabajador . "</div>
             <div class=grid_items_admin_img>
                 <a href=estado_trabajador.php?id=$id_trabajador&nombre=$nombre_trabajador&apellidos=$apellidos_trabajador><img src=../img/baja_usuario.png></a>
