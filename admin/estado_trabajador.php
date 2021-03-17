@@ -11,6 +11,10 @@
 
 <body>
     <?php
+    /*
+    * Se determina mediante un desplegable si el usuario se encuentra
+    * dado de alta o de baja
+    */
     if (!isset($_POST["enviar"])) {
         $nombre = $_GET["nombre"];
         $apellidos = $_GET["apellidos"];
