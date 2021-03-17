@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    /*
+    * Se muestran los datos de los trabajadores que estan en la parte pública
+    * esta información puede verla todo el mundo que tenga la dirección web
+    */
     <header>
         <input type="checkbox" id="btn_menu">
         <label for="btn_menu"><img src="img/icono_menu.png" width="100%" height="100%"></label>
