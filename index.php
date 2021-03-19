@@ -43,7 +43,7 @@
             <div class=grid_items>" . $nombre_trabajador . "</div>
             <div class=grid_items>" . $apellidos_trabajador . "</div>
             <div class=grid_items>" . $disponibilidad_trabajador . "</div>
-            <div class=grid_items>" . $grupo_trabajador . "</div>
+            <div class=grid_items_admin>"; ($grupo_trabajador==0)? printf("Sin grupo"):printf($grupo_trabajador); echo "</div>
             <div class=grid_items>" . $salario_trabajador . "</div>
             ";
         }
